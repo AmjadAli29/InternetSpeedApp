@@ -6,6 +6,7 @@ import 'package:connection_verify/connection_verify.dart';
 import 'package:edge_alert/edge_alert.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:async';
+import 'Home.dart';
 
 void main() => runApp(MyApp());
 
@@ -148,7 +149,7 @@ class _SplashscreenState extends State<Splashscreen> {
     Timer(Duration(seconds: 5), () async {
       con = await netcon();
       if(con){
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SettingScreen()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Home()));
 
       }
       else{
